@@ -30,17 +30,17 @@ export class CreateAccount extends React.Component {
                     balance: initDeposite.value,
                     registered: new Date().toLocaleString()
                 });
-                this.props.transactionTracer(
-                    {
-                        id: id,
-                        balance: initDeposite.value,
-                        type: 'credit',
-                        registered: registered,
-                        description: "Initial Credit"
-                    }
-                );
                 localStorage.setItem("accounts", JSON.stringify(accounts));
             }
+            this.props.transactionTracer(
+                {
+                    id: id,
+                    balance: initDeposite.value,
+                    type: 'credit',
+                    registered: registered,
+                    description: "Initial Credit"
+                }
+            );
             this.props.updateState();
             this.props.updateAlert(true, 'Account Created !', 'success');
             this.refs.navigateTo.click();
