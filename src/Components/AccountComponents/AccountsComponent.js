@@ -20,12 +20,14 @@ export function Accounts(props) {
                             </Link>
                         </div>
                     </div>
-                    <div className="row">
-                        <h1 className=" col-12 text-center">{props.accountsLength}</h1>
-                    </div>
-                    <div className="row">
-                        <h4 className=" col-12 text-center">Accounts</h4>
-                    </div>
+                    <Link to="/viewaccounts" className="text-dark" style={{ textDecoration: 'none' }}>
+                        <div className="row">
+                            <h1 className=" col-12 text-center">{props.accountsLength}</h1>
+                        </div>
+                        <div className="row">
+                            <h4 className=" col-12 text-center">Accounts</h4>
+                        </div>
+                    </Link>
                 </div>
 
             </div>

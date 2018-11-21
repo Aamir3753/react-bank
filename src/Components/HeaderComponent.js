@@ -16,12 +16,17 @@ export class Header extends React.Component {
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
                                     <Link to="/" className="nav-link">
-                                    Dashbord
+                                    Dashboard
                                     </Link>
                                 </NavItem>
                                 <NavItem>
                                     <Link to="/viewaccounts" className="nav-link">
                                     Accounts
+                                    </Link>
+                                </NavItem>
+                                <NavItem>
+                                    <Link to="/viewtransactions" className="nav-link">
+                                    Transactions
                                     </Link>
                                 </NavItem>
                             </Nav>

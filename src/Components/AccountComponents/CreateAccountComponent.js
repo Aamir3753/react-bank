@@ -9,7 +9,7 @@ export class CreateAccount extends React.Component {
         if (accountForm.checkValidity() && name.value.trim() !== "" && name.value.trim() !== "") {
             let accounts = JSON.parse(localStorage.getItem("accounts"));
             let id = Math.random() * 100000000000000000;
-            let registered = new Date().toLocaleDateString();
+            let registered = new Date().toLocaleString();
             if (accounts === null) {
                 accounts = [];
                 accounts.push(
@@ -21,6 +21,7 @@ export class CreateAccount extends React.Component {
                         registered: registered
                     }
                 )
+                this.props.totalDebits(Number(initDeposite.value));
                 localStorage.setItem("accounts", JSON.stringify(accounts));
             } else {
                 accounts.push({
@@ -30,6 +31,7 @@ export class CreateAccount extends React.Component {
                     balance: initDeposite.value,
                     registered: new Date().toLocaleString()
                 });
+                this.props.totalDebits(Number(initDeposite.value));
                 localStorage.setItem("accounts", JSON.stringify(accounts));
             }
             this.props.transactionTracer(
@@ -58,6 +60,10 @@ export class CreateAccount extends React.Component {
                 this.props.updateAlert(true, 'please deposite some amount !', 'danger');
                 initDeposite.focus();
 
+            }
+            else if (initDeposite.validity.rangeUnderflow) {
+                this.props.updateAlert(true, 'please deposite ammout > or = 100 !', 'danger');
+                initDeposite.focus();
             }
         }
 
@@ -97,7 +103,7 @@ export class CreateAccount extends React.Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="initDeposite">Initail Deposite</label>
-                        <input className="form-control" type="text" id="initDeposite" defaultValue="1000" required />
+                        <input className="form-control" type="number" min="100" id="initDeposite" defaultValue="1000" required />
                     </div>
                     <div className="d-flex flex-row-reverse">
                         <button type="button" onClick={() => { this.checkValidation(this.props) }} className=" btn btn-success btn-sm">CREATE ACCOUNT</button>

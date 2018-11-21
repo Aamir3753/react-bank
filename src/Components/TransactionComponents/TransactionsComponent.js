@@ -1,4 +1,5 @@
 import React from 'react';
+import {Badge} from 'reactstrap';
 import { Link } from 'react-router-dom';
 export function Transactions(props) {
     return (
@@ -15,15 +16,28 @@ export function Transactions(props) {
                             </Link>
                         </div>
                     </div>
+                    <Link to="/viewtransactions" className="text-dark" style={{ textDecoration: 'none' }}>
+                        <div className="row">
+                            <h1 className=" col-12 text-center">{props.transctionsLength}</h1>
+                        </div>
+                        <div className="row">
+                            <h4 className=" col-12 text-center">Transcations</h4>
+                        </div>
+                    </Link>
                     <div className="row">
-                        <h1 className=" col-12 text-center">{props.transctionsLength}</h1>
-                    </div>
-                    <div className="row">
-                        <h4 className=" col-12 text-center">Transcations</h4>
+                        <div className="col-6">
+                            <h6>
+                               <Badge color="secondary">Debits:{props.debits}</Badge>
+                            </h6>
+                        </div>
+                        <div className="col-6 d-flex justify-content-end">
+                            <h6>
+                            <Badge color="secondary">Credits:{props.credits}</Badge>
+                            </h6>
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </div>
+        </div >
     )
 }

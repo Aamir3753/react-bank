@@ -88,7 +88,6 @@ export class ViewTransactions extends React.Component {
                         </Link>
                     </div>
                     <div className="table-responsive">
-
                         <table className="table table-bordered">
                             <thead>
                                 <tr>
@@ -101,7 +100,7 @@ export class ViewTransactions extends React.Component {
                             <tbody>
                                 {
                                     this.props.transactions.map((transaction) => (
-                                        <tr key={transaction.id}>
+                                        <tr key={Math.random()}>
                                             <td style={{ color: 'blue', fontFamily: 'cursive', cursor: 'pointer' }}>
                                                 <a href="void:javascript:(0)" onClick={() => { this.setState({ isModalOpen: true, transactionDetail: transaction }) }}>{transaction.id}</a></td>
                                             <td style={{ fontFamily: 'cursive' }}>{transaction.registered}</td>

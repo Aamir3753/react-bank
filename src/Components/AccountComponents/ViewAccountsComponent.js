@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 export function ViewAccounts(props) {
-    if (props.accounts === null) {
+    if (props.accounts === null || props.accounts.length === 0) {
         return (
             <div className="col-12 mt-4">
                 <div>
@@ -14,6 +14,11 @@ export function ViewAccounts(props) {
                 <h2 className="text-center text-dark">
                     There is no account!
                  </h2>
+                 <div className="d-flex justify-content-center mb-4">
+                 <Link to="/createaccount" >
+                 <button type="button" className="btn btn-primary">Create account</button>
+                 </Link>
+                 </div>
             </div>
         )
     }
