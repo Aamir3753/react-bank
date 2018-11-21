@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/react-bank/static/js/runtime~main.5a185801.js"
   },
   {
-    "revision": "f5995024d71a45680b38",
-    "url": "/react-bank/static/js/main.f5995024.chunk.js"
+    "revision": "6fb975e67c870dddd63a",
+    "url": "/react-bank/static/js/main.6fb975e6.chunk.js"
   },
   {
     "revision": "8a15db931dc37c1e966c",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/react-bank/static/css/1.76deb9c5.chunk.css"
   },
   {
-    "revision": "f0bd41292a330f4b0f255ccabc477ba1",
+    "revision": "07dbcd4cfc60de555a637506b58cf012",
     "url": "/react-bank/index.html"
   }
 ];
