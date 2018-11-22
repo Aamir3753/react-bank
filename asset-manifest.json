@@ -1,6 +1,6 @@
 {
-  "main.js": "/react-bank/static/js/main.6fb975e6.chunk.js",
-  "main.js.map": "/react-bank/static/js/main.6fb975e6.chunk.js.map",
+  "main.js": "/react-bank/static/js/main.047ff392.chunk.js",
+  "main.js.map": "/react-bank/static/js/main.047ff392.chunk.js.map",
   "static/css/1.76deb9c5.chunk.css": "/react-bank/static/css/1.76deb9c5.chunk.css",
   "static/js/1.8a15db93.chunk.js": "/react-bank/static/js/1.8a15db93.chunk.js",
   "static/js/1.8a15db93.chunk.js.map": "/react-bank/static/js/1.8a15db93.chunk.js.map",
@@ -8,6 +8,6 @@
   "runtime~main.js.map": "/react-bank/static/js/runtime~main.5a185801.js.map",
   "static/css/1.76deb9c5.chunk.css.map": "/react-bank/static/css/1.76deb9c5.chunk.css.map",
   "index.html": "/react-bank/index.html",
-  "precache-manifest.c0497e076d9e8ddf51ddb0d14a7e372b.js": "/react-bank/precache-manifest.c0497e076d9e8ddf51ddb0d14a7e372b.js",
+  "precache-manifest.ade2922fdc4b5f958a5bf5f4a9605950.js": "/react-bank/precache-manifest.ade2922fdc4b5f958a5bf5f4a9605950.js",
   "service-worker.js": "/react-bank/service-worker.js"
 }
